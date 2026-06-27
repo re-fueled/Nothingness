@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Nothingness",
+  "version": "1.0",
+  "description": "Sets the new tab page to a completely blank page, like Brave Browser.",
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "blank.html"
+  }
+}
