@@ -2,9 +2,9 @@
 
 ## About
 
-Nothingness is a Google Chrome extension by [Refueled](https://refueled.net/nonthingness). It replaces your New Tab page with a completely blank, empty page. There are similar extensions, but always add crap you don't want. This extension is simple, has no adds or anything else but an empty tab.
+Nothingness is a Google Chrome extension by [Refueled](https://refueled.net/nothingness). It replaces your New Tab page with a completely blank, empty page.
 
-It collects no data and requires no permissions. Nothingness does one thing and does it perfectly: gives you a clean, distraction-free new tab every single time.
+Unlike similar extensions, Nothingness contains no ads whatsoever. It also includes no extra features, data collection, or required permissions. It does one thing and does it perfectly: delivers a clean, distraction-free new tab every time.
 
 ## Features
 - Overrides `chrome://newtab` with an empty white (or black in dark mode) page.

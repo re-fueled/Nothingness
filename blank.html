@@ -2,22 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
   <style>
-    html, body {
+    *, *::before, *::after {
       margin: 0;
       padding: 0;
-      height: 100%;
+      box-sizing: border-box;
+    }
+    html, body {
       width: 100%;
-      background-color: #f7f7f7;
+      height: 100%;
       overflow: hidden;
+      background-color: #ffffff;
+      user-select: none;
+      cursor: default;
     }
     @media (prefers-color-scheme: dark) {
       html, body {
-        background-color: #121212;
+        background-color: #000000;
       }
     }
   </style>
 </head>
-<body></body>
+<body>
+  <script>
+    // Keep title blank — Chrome can override it after load
+    const titleEl = document.querySelector('title');
+    new MutationObserver(() => { document.title = ''; })
+      .observe(titleEl, { childList: true, characterData: true, subtree: true });
+
+    // Remove any elements Chrome injects into the page (Customize Chrome, etc.)
+    new MutationObserver((mutations) => {
+      for (const m of mutations)
+        for (const node of m.addedNodes)
+          if (node.nodeType === 1) node.remove();
+    }).observe(document.body, { childList: true });
+  </script>
+</body>
 </html>
